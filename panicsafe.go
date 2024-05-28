@@ -43,3 +43,8 @@ func Recover2[T any](f func() (T, error)) (ret T, retErr error) {
 	defer Defered(&retErr)
 	return f()
 }
+
+func Recover3[T1 any, T2 any](f func() (T1, T2, error)) (ret1 T1, ret2 T2, retErr error) {
+	defer Defered(&retErr)
+	return f()
+}
